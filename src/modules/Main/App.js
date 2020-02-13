@@ -1,6 +1,3 @@
-// import React from 'react';
-// import { SafeAreaView, StyleSheet, ScrollView, View, Text, StatusBar, TouchableOpacity, Animated } from 'react-native';
-// import { Header, LearnMoreLinks, Colors, DebugInstructions, ReloadInstructions } from 'react-native/Libraries/NewAppScreen';
 import { createAppContainer, createSwitchNavigator } from 'react-navigation'
 import { createStackNavigator } from 'react-navigation-stack'
 import * as firebase from 'firebase'
@@ -10,8 +7,7 @@ import LoginScreen from '../Screens/LoginScreen'
 import RegisterScreen from '../Screens/RegisterScreen'
 import HomeScreen from '../Screens/HomeScreen'
 
-// import BouncingButton from '../Helper/BouncingButton'
-// import FloatButton from '../Helper/FloatButton'
+
 
 var firebaseConfig = {
   apiKey: "AIzaSyA-7BPHB6WXdqeEKLvyPDTDU7VXV8bf9Ok",
@@ -30,8 +26,8 @@ const AppStack = createStackNavigator({
 })
 
 const AuthStack = createStackNavigator({
-  Login: LoginScreen,
-  Register: RegisterScreen
+  Register: RegisterScreen,
+  Login: LoginScreen
 })
 
 export default createAppContainer(
@@ -46,22 +42,3 @@ export default createAppContainer(
     }
   )
 )
-
-// const App: () => React$Node = () => {
-//   return (
-//     <View style={styles.container}>
-//       <BouncingButton />
-//       <FloatButton style={{ bottom: 100 }} />
-//     </View>
-//   );
-// };
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: '#c0d9ef',
-//     alignItems: 'center',
-//   }
-// });
-
-// export default App;

@@ -1,8 +1,13 @@
 import React from 'react'
-import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native'
+import { View, Text, StyleSheet, TextInput, TouchableOpacity, Image, StatusBar } from 'react-native'
 import * as firebase from 'firebase'
+import FontAwesome from "react-native-vector-icons/FontAwesome"
 
 export default class RegisterScreen extends React.Component {
+    static navigatorOptions = {
+        header: null
+    }
+
     state = {
         name: '',
         email: '',
@@ -24,7 +29,15 @@ export default class RegisterScreen extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text style={styles.greeting}>{`Olá.\n Cadastre-se para começar.`}</Text>
+                <StatusBar barStyle="light-content"></StatusBar>
+                <Image style={styles.headerImg} source={require('../../assets/Img/authHeader.png')}></Image>
+
+                <TouchableOpacity style={styles.back} onPress={() => this.props.navigation.goBack()}>
+                    {/* <FontAwesome name={"arrow-circle-left"} size={20} color={"#007fef"} /> */}
+                    <FontAwesome name={"arrow-left"} size={20} color={"white"} />
+                </TouchableOpacity>
+
+                <Text style={styles.greeting}>{`Cadastre-se para começar.`}</Text>
 
                 <View style={styles.errorMessage}>
                     {this.state.errorMessage && <Text style={styles.error}>{this.state.errorMessage}</Text>}
@@ -84,6 +97,7 @@ const styles = StyleSheet.create({
         textAlign: 'center'
     },
     form: {
+        marginTop: -55,
         marginBottom: 48,
         marginHorizontal: 30
     },
@@ -125,5 +139,20 @@ const styles = StyleSheet.create({
     sigInLinkButton: {
         fontWeight: '500',
         color: '#007fef'
+    },
+    headerImg: {
+        width: '100%',
+        height: 250,
+    },
+    back: {
+        position: 'absolute',
+        top: 20,
+        left: 15,
+        width: 32,
+        height: 32,
+        borderRadius: 16,
+        backgroundColor: 'rgba(21, 22, 48, 0.1)',
+        alignItems: 'center',
+        justifyContent: 'center',
     }
 })

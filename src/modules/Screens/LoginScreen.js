@@ -22,10 +22,12 @@ export default class LoginScreen extends React.Component {
     }
 
     render() {
+        LayoutAnimation.easeInEaseOut()
+
         return (
             <View style={styles.container}>
                 <StatusBar barStyle='light-content'></StatusBar>
-                {/* <Image style={styles.headerImg} source={require('../../assets/Img/authHeader.png')}></Image> */}
+                <Image style={styles.headerImg} source={require('../../assets/Img/authHeader.png')}></Image>
                 <Text style={styles.greeting}>{`Olá novamente.\n Bem vindo de volta.`}</Text>
 
                 <View style={styles.errorMessage}>
@@ -81,8 +83,9 @@ const styles = StyleSheet.create({
         textAlign: 'center'
     },
     form: {
+        marginTop: -55,
         marginBottom: 48,
-        // marginHorizontal: 30
+        marginHorizontal: 30
     },
     inputTitle: {
         color: '#8A8F9E',
