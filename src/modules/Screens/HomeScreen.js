@@ -1,8 +1,17 @@
 import React from 'react'
-import { View, Text, StyleSheet, TouchableOpacity, Image, StatusBar, FlatList } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity, Image, StatusBar, FlatList, TouchableWithoutFeedback, Animated } from 'react-native'
 import * as firebase from 'firebase'
 
+import BouncingButton from '../Helper/BouncingButton'
+
 export default class HomeScreen extends React.Component {
+    constructor(props) {
+        super(props)
+
+        this.handlePressIn = this.handlePressIn.bind(this)
+        this.handlePressOut = this.handlePressOut.bind(this)
+    }
+
     state = {
         email: '',
         displayName: '',
@@ -10,7 +19,8 @@ export default class HomeScreen extends React.Component {
 
     componentDidMount() {
         const { email, displayName } = firebase.auth().currentUser
-
+        
+        // this.animation = new Animated.Value(1)
         this.setState({ email, displayName })
     }
 
@@ -18,7 +28,25 @@ export default class HomeScreen extends React.Component {
         firebase.auth().signOut()
     }
 
+    handlePressIn() {
+        Animated.spring(this.animation, {
+            toValue: .5
+        }).start()
+    }
+
+    handlePressOut() {
+        Animated.spring(this.animation, {
+            toValue: 1,
+            friction: 3,
+            tension: 40
+        }).start() 
+    }
+
     render() {
+        const animatedStyle = {
+            transform: [{ scale: this.animation }]
+        }
+
         return (
             <View style={styles.container}>
                 <StatusBar barStyle="light-content"></StatusBar>
@@ -46,12 +74,20 @@ export default class HomeScreen extends React.Component {
                 </View>
 
                 <Text>Olá, {this.state.email}!</Text>
+                {/* <BouncingButton /> */}
                 <TouchableOpacity style={styles.signOutButton} onPress={this.signOutUser}>
-                    <Text>Sair</Text>
                     <View style={styles.exitButton}>
-                        <Image style={styles.exitBtn} source={require('../../assets/Icon/exitdoor.png')}></Image>
+                        <Text style={styles.exitText}>Sair</Text>
                     </View>
                 </TouchableOpacity>
+
+                
+                {/* <TouchableWithoutFeedback onPressIn={this.handlePressIn} onPressOut={this.handlePressOut}>
+                    <Animated.View style={[styles.button, animatedStyle]}>
+                        <Text style={styles.text}>Entrar</Text>
+                    </Animated.View>
+                </TouchableWithoutFeedback> */}
+                
             </View>
         )
     }
@@ -62,7 +98,8 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     signOutButton: {
-        marginTop: 32
+        marginTop: 32,
+        alignItems: 'center',
     },
     form: {
         marginBottom: 48,
@@ -97,11 +134,15 @@ const styles = StyleSheet.create({
         height: 80,
     },
     exitButton: {
-        backgroundColor: 'blue',
-        color: 'white'
+        backgroundColor: '#2899C0',
+        width: 80,
+        height: 30,
+        borderRadius: 10,
+        alignItems: 'center',
     },
-    exitBtn: {
-        backgroundColor: 'white',
-        color: 'white'
+    exitText: {
+        color: 'white',
+        fontSize: 20,
+        fontWeight: 'bold',
     }
 })
