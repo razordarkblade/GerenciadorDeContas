@@ -1,8 +1,8 @@
 import React from 'react'
-import { View, Text, StyleSheet, TouchableOpacity, Image, StatusBar, FlatList, TouchableWithoutFeedback, Animated } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity, Image, StatusBar, FlatList, TouchableWithoutFeedback, Animated, ScrollView } from 'react-native'
 import * as firebase from 'firebase'
-
 import BouncingButton from '../Helper/BouncingButton'
+const ContasParaPagarList = require('../../mock/contasParaPagar.json');
 
 export default class HomeScreen extends React.Component {
     constructor(props) {
@@ -67,20 +67,34 @@ export default class HomeScreen extends React.Component {
                     </View>
                 </View>
 
-                <View style={styles.gridSection}>
-                    <View style={styles.gridContainer}>
-
+                
+                
+                <FlatList 
+                    style={styles.contasRecentes}
+                    data={ContasParaPagarList.Contas}
+                    renderItem={({item}) => (
+                        <View style={styles.itemSection}>
+                            <Text style={styles.gridLineFirstCell}>{item.conta}</Text>
+                        </View>
+                    )}
+                />
+                {/* <ScrollView>
+                    <View styles={styles.gridLine}>
+                        <View styles={styles.gridLineFirstCell}><Text>{ContasParaPagarList.Contas[0].conta}</Text></View>
+                        <Text styles={styles.gridLineSecondCell}>{ContasParaPagarList.Contas[0].valor}</Text>
+                        <Text styles={styles.gridLineThirdCell}>{ContasParaPagarList.Contas[0].pago}</Text>
                     </View>
-                </View>
+                    <Image source={require('../../assets/Icon/list.png')}></Image>
+                    
+                </ScrollView> */}
+                
 
-                <Text>Olá, {this.state.email}!</Text>
                 {/* <BouncingButton /> */}
                 <TouchableOpacity style={styles.signOutButton} onPress={this.signOutUser}>
                     <View style={styles.exitButton}>
                         <Text style={styles.exitText}>Sair</Text>
                     </View>
                 </TouchableOpacity>
-
                 
                 {/* <TouchableWithoutFeedback onPressIn={this.handlePressIn} onPressOut={this.handlePressOut}>
                     <Animated.View style={[styles.button, animatedStyle]}>
@@ -98,7 +112,6 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     signOutButton: {
-        marginTop: 32,
         alignItems: 'center',
     },
     form: {
@@ -131,18 +144,38 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: '#5c6773',
         width:'90%',
-        height: 80,
+        height: 280,
     },
     exitButton: {
-        backgroundColor: '#2899C0',
-        width: 80,
-        height: 30,
-        borderRadius: 10,
+        width: 350,
+        marginTop: 40,
+        backgroundColor: '#007fef',
+        borderRadius: 4,
+        height: 52,
         alignItems: 'center',
+        justifyContent: 'center',
     },
     exitText: {
-        color: 'white',
-        fontSize: 20,
-        fontWeight: 'bold',
-    }
+        color: '#FFF',
+        fontWeight: '500'
+    },
+    contasRecentes: {
+        marginTop: '20%',
+    },
+    itemSection: {
+        marginTop: 10,
+        marginLeft: '5%',
+        borderRadius: 4,
+        borderWidth: 1,
+        borderColor: '#5c6773',
+        width: '90%',
+        height: 80,
+    },
+    gridLine: {
+        
+    },
+    gridLineFirstCell: {
+        width: 250,
+        backgroundColor: '#007fef',
+    },
 })
