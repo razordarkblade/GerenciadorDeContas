@@ -74,7 +74,18 @@ export default class HomeScreen extends React.Component {
                     data={ContasParaPagarList.Contas}
                     renderItem={({item}) => (
                         <View style={styles.itemSection}>
-                            <Text style={styles.gridLineFirstCell}>{item.conta}</Text>
+                            <Text style={styles.gridLineHeaderCell}>{item.conta}</Text>
+                            <View style={styles.itemContainer}>
+                                <View>
+                                    <Text style={styles.gridLineTextCell}>Vencimento:</Text><Text style={styles.gridLineTextCell}>{item.vencimento}</Text>
+                                </View>
+                                <View>
+                                    <Text style={styles.gridLineTextCell}>Valor:</Text><Text style={styles.gridLineTextCell}>{item.valor}</Text>
+                                </View>
+                                <View >
+                                    <Image style={styles.statusIcon} source={require('../../assets/Icon/okIcon.png')}></Image>
+                                </View>
+                            </View>
                         </View>
                     )}
                 />
@@ -148,7 +159,7 @@ const styles = StyleSheet.create({
     },
     exitButton: {
         width: 350,
-        marginTop: 40,
+        marginTop: 10,
         backgroundColor: '#007fef',
         borderRadius: 4,
         height: 52,
@@ -171,11 +182,19 @@ const styles = StyleSheet.create({
         width: '90%',
         height: 80,
     },
+    itemContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+    },
+    statusIcon: {
+        width: 50,
+        height: 50,
+    },
     gridLine: {
         
     },
-    gridLineFirstCell: {
+    gridLineHeaderCell: {
         width: 250,
-        backgroundColor: '#007fef',
+        fontSize: 20,
     },
 })
