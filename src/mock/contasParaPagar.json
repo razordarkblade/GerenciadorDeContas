@@ -5,106 +5,166 @@
             "id": 1,
             "conta": "Conta de Luz (Apto)",
             "vencimento": "15/03/2020",
+            "dataPgto": "15/03/2020",
             "valor": "R$ 400,00",
-            "pago": true
+            "pago": true,
+            "parcela" : "1/1",
+            "obs" : "Observação teste",
+            "codigoDeBarras" : "836900000040 846000531075 573646885117 101146858937"
         },
         {
             "id": 2,
             "conta": "Tim Live (Internet)",
             "vencimento": "15/03/2020",
+            "dataPgto": "15/03/2020",
             "valor": "R$ 100,00",
-            "pago": false
+            "pago": false,
+            "parcela" : "1/1",
+            "obs" : "Observação teste",
+            "codigoDeBarras" : "836900000040 846000531075 573646885117 101146858937"
         },
         {
             "id": 3,
             "conta": "Escola da Sarah",
             "vencimento": "15/03/2020",
+            "dataPgto": "15/03/2020",
             "valor": "R$ 225,00",
-            "pago": true
+            "pago": true,
+            "parcela" : "1/1",
+            "obs" : "Observação teste",
+            "codigoDeBarras" : "836900000040 846000531075 573646885117 101146858937"
         },
         {
             "id": 4,
             "conta": "Tim Live (Internet)",
             "vencimento": "15/03/2020",
+            "dataPgto": "15/03/2020",
             "valor": "R$ 100,00",
-            "pago": false
+            "pago": false,
+            "parcela" : "1/1",
+            "obs" : "Observação teste",
+            "codigoDeBarras" : "836900000040 846000531075 573646885117 101146858937"
         },
         {
             "id": 5,
             "conta": "Escola da Sarah",
             "vencimento": "15/03/2020",
+            "dataPgto": "15/03/2020",
             "valor": "R$ 225,00",
-            "pago": true
+            "pago": true,
+            "parcela" : "1/1",
+            "obs" : "Observação teste",
+            "codigoDeBarras" : "836900000040 846000531075 573646885117 101146858937"
         },
         {
             "id": 6,
             "conta": "Tim Live (Internet)",
             "vencimento": "15/03/2020",
+            "dataPgto": "15/03/2020",
             "valor": "R$ 100,00",
-            "pago": false
+            "pago": false,
+            "parcela" : "1/1",
+            "obs" : "Observação teste",
+            "codigoDeBarras" : "836900000040 846000531075 573646885117 101146858937"
         },
         {
             "id": 7,
             "conta": "Escola da Sarah",
             "vencimento": "15/03/2020",
+            "dataPgto": "15/03/2020",
             "valor": "R$ 225,00",
-            "pago": true
+            "pago": true,
+            "parcela" : "1/1",
+            "obs" : "Observação teste",
+            "codigoDeBarras" : "836900000040 846000531075 573646885117 101146858937"
         },
         {
             "id": 8,
             "conta": "Tim Live (Internet)",
             "vencimento": "15/03/2020",
+            "dataPgto": "15/03/2020",
             "valor": "R$ 100,00",
-            "pago": false
+            "pago": false,
+            "parcela" : "1/1",
+            "obs" : "Observação teste",
+            "codigoDeBarras" : "836900000040 846000531075 573646885117 101146858937"
         },
         {
             "id": 9,
             "conta": "Escola da Sarah",
             "vencimento": "15/03/2020",
+            "dataPgto": "15/03/2020",
             "valor": "R$ 225,00",
-            "pago": true
+            "pago": true,
+            "parcela" : "1/1",
+            "obs" : "Observação teste",
+            "codigoDeBarras" : "836900000040 846000531075 573646885117 101146858937"
         },
         {
             "id": 10,
             "conta": "Tim Live (Internet)",
             "vencimento": "15/03/2020",
+            "dataPgto": "15/03/2020",
             "valor": "R$ 100,00",
-            "pago": false
+            "pago": false,
+            "parcela" : "1/1",
+            "obs" : "Observação teste",
+            "codigoDeBarras" : "836900000040 846000531075 573646885117 101146858937"
         },
         {
             "id": 11,
             "conta": "Escola da Sarah",
             "vencimento": "15/03/2020",
+            "dataPgto": "15/03/2020",
             "valor": "R$ 225,00",
-            "pago": true
+            "pago": true,
+            "parcela" : "1/1",
+            "obs" : "Observação teste",
+            "codigoDeBarras" : "836900000040 846000531075 573646885117 101146858937"
         },
         {
             "id": 12,
             "conta": "Tim Live (Internet)",
             "vencimento": "15/03/2020",
+            "dataPgto": "15/03/2020",
             "valor": "R$ 100,00",
-            "pago": false
+            "pago": false,
+            "parcela" : "1/1",
+            "obs" : "Observação teste",
+            "codigoDeBarras" : "836900000040 846000531075 573646885117 101146858937"
         },
         {
             "id": 13,
             "conta": "Escola da Sarah",
             "vencimento": "15/03/2020",
+            "dataPgto": "15/03/2020",
             "valor": "R$ 225,00",
-            "pago": true
+            "pago": true,
+            "parcela" : "1/1",
+            "obs" : "Observação teste",
+            "codigoDeBarras" : "836900000040 846000531075 573646885117 101146858937"
         },
         {
             "id": 14,
             "conta": "Tim Live (Internet)",
             "vencimento": "15/03/2020",
+            "dataPgto": "15/03/2020",
             "valor": "R$ 100,00",
-            "pago": false
+            "pago": false,
+            "parcela" : "1/1",
+            "obs" : "Observação teste",
+            "codigoDeBarras" : "836900000040 846000531075 573646885117 101146858937"
         },
         {
             "id": 15,
             "conta": "Escola da Sarah",
             "vencimento": "15/03/2020",
+            "dataPgto": "15/03/2020",
             "valor": "R$ 225,00",
-            "pago": true
+            "pago": true,
+            "parcela" : "1/1",
+            "obs" : "Observação teste",
+            "codigoDeBarras" : "836900000040 846000531075 573646885117 101146858937"
         }
     ]
 }

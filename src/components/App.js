@@ -22,7 +22,7 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 const AppStack = createStackNavigator({
-  Home: HomeScreen
+  Home: HomeScreen,
 })
 
 const AuthStack = createStackNavigator({
@@ -34,8 +34,8 @@ export default createAppContainer(
   createSwitchNavigator(
     {
       Loading: LoadingScreen,
+      Auth: AuthStack,
       App: AppStack,
-      Auth: AuthStack
     },
     {
       initialRoutName: 'Loading'
