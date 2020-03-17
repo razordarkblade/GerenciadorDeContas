@@ -75,6 +75,11 @@ export default class HomeScreen extends React.Component {
                 <Header title='Teste de Title' />
                 <Menu />
                 <ContasRecentes />
+                <TouchableOpacity style={styles.signOutButton} onPress={this.signOutUser}>
+                    <View style={styles.exitButton}>
+                        <Text style={styles.exitText}>Sair</Text>
+                    </View>
+                </TouchableOpacity>
             </View>
         )
 

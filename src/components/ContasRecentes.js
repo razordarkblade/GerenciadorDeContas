@@ -39,8 +39,8 @@ export default class ContasRecentes extends Component {
 const styles = StyleSheet.create({
     container: {
         marginTop: 25,
+        height: '50%',
     },
-
     itemSection: {
         marginTop: 10,
         marginLeft: '5%',
@@ -50,27 +50,22 @@ const styles = StyleSheet.create({
         width: '90%',
         height: 80,
     },
-
     gridLineHeaderCell: {
         width: 250,
         fontSize: 20,
         marginLeft: 5,
     },
-
     itemContainer: {
         flexDirection: 'row',
         justifyContent: 'space-between',
     },
-
     firstCell: {
         marginLeft: 5,
     },
-
     lastCell: {
         marginRight: 5,
         marginTop: -10,
     },
-
     statusIcon: {
         width: 50,
         height: 50,
